@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Collapsible sidebar using Bootstrap 3</title>
+
+         <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+
+
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>YouTag Baby!</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <p>Your Tags</p>
+                    <li class="active">
+                        <a href="#favTags" data-toggle="collapse" aria-expanded="false">Favorite Tags</a>
+                        <ul class="collapse list-unstyled" id="favTags">
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#allTags" data-toggle="collapse" aria-expanded="false">All Tags</a>
+                        <ul class="collapse list-unstyled" id="allTags">
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+
+                <ul class="list-unstyled CTAs">
+                    <li><a href="http://shashwatsai.me" class="download" target="_blank">Visit Website</a></li>
+                    <li><a href="#" class="article" id="adNewTag">Add New Tag</a></li>
+                    <li><a href="#" class="article" id="clearAll">ClearAll</a></li>
+                </ul>
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                                <span></span>
+                            </button>
+                        </div>
+
+
+                    </div>
+                </nav>
+                <div id="all_links">
+                    <h2 id="current_tag_title"></h2>
+                    <div id="current_tag_content">
+                        <p id="instruction">You can toggle the view, and click on Add New Tag and see the magic!</p>
+                        <ul class="list-unstyled" id="current_tag_list">
+
+                        </ul>
+
+                        <!-- add the current link to the current tag -->
+                        <button class="btn btn-primary" id="add_link_to_tag"></button>
+                    </div>
+                </div>
+                <div id="add_new_tag">
+                    <h2>#AddNewTag</h2>
+                    <div>
+                        <input type="text" placeholder="TagName" class="form-control" id="newTagVal"/>
+                        <button class="btn btn-info" id="submitNewTag">YouTag It</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery CDN -->
+         <script src="js/jquery.js"></script>
+         <!-- Bootstrap Js CDN -->
+         <script src="js/bootstrap.js"></script>
+         <script src="js/view.js"></script>
+         <script src="js/store.js"></script>
+         <script src="js/model.js"></script>
+         <script src="js/controller.js"></script>
+         <script src="js/app.js"></script>
+         <script src="js/youtag.js"></script>
+
+    </body>
+</html>

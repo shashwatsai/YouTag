@@ -1,0 +1,27 @@
+{
+    "name": "YouTag",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description" : "This Extension is used to tag youtube videos",
+    "icons": { "16": "icon.png", "48": "icon.png", "128": "icon.png" },
+    "omnibox": { "keyword" : "youtag" },
+    "browser_action": {
+        "default_icon": { "19": "icon.png", "38": "icon.png" },
+        "default_title": "YouTag",
+        "default_popup": "index.html"
+    },
+    "background": {
+        "scripts": [
+        "js/jquery.js",
+        "js/bootstrap.js",
+        "js/view.js",
+        "js/store.js",
+        "js/model.js",
+        "js/controller.js",
+        "js/app.js",
+        "background.js"],
+        "persistent": true
+    },
+    "permissions":["storage", "alarms", "notifications",
+                  "<all_urls>" ,"tabs"]
+}
